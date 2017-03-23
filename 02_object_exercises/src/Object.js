@@ -3,14 +3,14 @@
      and the value of "dog"
 */
 
-var obj = {}
+var obj = {"cat": "dog"}
 
 /*
   2. Create a property name boo on objy and give it the
      value of "moo"
 */
 
-var objy;
+var objy = {boo: "moo"};
 
 // Add code below
 // e.g. obj.hello = "foo"
@@ -21,7 +21,7 @@ var objy;
      of "hi"
 */
 
-var niceObject = {};
+var niceObject = {hello: "hi"};
 
 /*
    4. Add the operator that makes the variable
@@ -35,7 +35,7 @@ var eh = {"a": "a"};
 
 // Change code below:
 
-var tyf = a > eh;
+var tyf = a !== eh;
 
 
 /*
@@ -47,7 +47,7 @@ var sampleArray = [1,2,3];
 var arrayObject = typeof sampleArray;
 
 // Update code below
-var isObject = arrayObject !== "object"
+var isObject = arrayObject === "object"
 
 /*
 
@@ -65,8 +65,8 @@ zestyObject.bar = "four"
 spicyObject[bar] = "four"
 
 //Replace "?" with correct values
-var q = zestyObject[4] === "?"
-var z = spicyObject[4] === "?"
+var q = zestyObject[4] !== "four"
+var z = spicyObject[4] === "four"
 
 /*
   8. Write a function named reverseProperties
@@ -75,10 +75,19 @@ var z = spicyObject[4] === "?"
      reverseProperties({"a": "b"}) //=> {"b": "a"}
 */
 
+
+
+
 function reverseProperties(obj) {
-  // Add code here
-  return
+ var reverseObj = {};
+ for (var key in obj) {
+   reverseObj[obj[key]] = key;
+ }
+ return reverseObj;
 };
+var object = {"a": "b", "c": "d"}
+
+reverseProperties(object);
 
 /*
   9. Write a function that returns an object
@@ -130,7 +139,7 @@ var fakeCarDealerData = {
 }
 
 // Replace "?" with correct values
-var rt = fakeCarDealerData.dealerId === "?"
-var vt = fakeCarDealerData.cars[2] === "?"
-var gt = fakeCarDealerData.employees.managers[0].name === "?"
-var kt = fakeCarDealerData.employees.interns.length === "?"
+var rt = fakeCarDealerData.dealerId === 34
+var vt = fakeCarDealerData.cars[2] === "Hyundai"
+var gt = fakeCarDealerData.employees.managers[0].name === "Steve"
+var kt = fakeCarDealerData.employees.interns.length === 2
